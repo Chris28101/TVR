@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bhrgeatcnp1x"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 54.0
+offset_bottom = 41.0
+metadata/_edit_group_ = true
+
+[node name="CoinLabel" type="Label" parent="."]
+offset_right = 52.0
+offset_bottom = 23.0
+text = "Score: "

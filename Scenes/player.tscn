@@ -1,8 +1,9 @@
-[gd_scene load_steps=64 format=3 uid="uid://qr1qmwwdvj8w"]
+[gd_scene load_steps=65 format=3 uid="uid://qr1qmwwdvj8w"]
 
 [ext_resource type="Texture2D" uid="uid://ub0dgh7045jo" path="res://art/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 0.png" id="1_uqlro"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_v2xpx"]
 [ext_resource type="Texture2D" uid="uid://c5jofb2fr57xe" path="res://art/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png" id="2_eslcn"]
+[ext_resource type="PackedScene" uid="uid://bhrgeatcnp1x" path="res://Scenes/coin_label.tscn" id="2_jjvpk"]
 [ext_resource type="Texture2D" uid="uid://lta7t5i72wyo" path="res://art/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 1.png" id="3_7br5m"]
 [ext_resource type="Texture2D" uid="uid://b1h4dv3hunye2" path="res://art/Dacian Warrior Animated Pixel-Art 2D/Dead/50x50/Dead 1 Sprite Sheet.png" id="3_56mki"]
 [ext_resource type="Texture2D" uid="uid://dqmervl43q88t" path="res://art/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 0 Sprite Sheet.png" id="4_pe4f5"]
@@ -437,6 +438,12 @@ limit_top = -252
 limit_right = 461
 limit_bottom = 98
 position_smoothing_enabled = true
+
+[node name="Control" parent="Camera2D" instance=ExtResource("2_jjvpk")]
+offset_left = 97.0
+offset_top = -84.0
+offset_right = 151.0
+offset_bottom = -43.0
 
 [node name="DealDamageZone" type="Area2D" parent="."]
 
