@@ -17,4 +17,4 @@ func _process(delta: float) -> void:
 func _on_load_detect_body_entered(body):
 	if body is Player:
 		Global.gameStarted = true 
-		get_tree().change_scene_to_file("res://Scenes/stage_1.tscn")
+		get_tree().change_scene_to_file("res://Scenes/city.tscn")

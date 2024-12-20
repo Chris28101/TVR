@@ -213,5 +213,14 @@ shape = SubResource("CircleShape2D_nqjpc")
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_et8ne")
 
+[node name="Healthbar" type="ProgressBar" parent="."]
+modulate = Color(0, 1, 0.0117647, 1)
+offset_left = -10.0
+offset_top = -16.0
+offset_right = 10.0
+offset_bottom = -12.0
+max_value = 80.0
+show_percentage = false
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Bat hitbox" to="." method="_on_bat_hitbox_area_entered"]

@@ -38,6 +38,7 @@ func move(delta):
 		velocity.y += 10 *delta
 		velocity.x = 0
 	move_and_slide()
+	update_health()
 	
 func _process(delta):
 		Global.batDamageAmount = damage_to_deal
@@ -95,3 +96,12 @@ func take_damage(damage):
 		health = 0
 		dead = true
 	print(str(self), "current health is ", health)
+	
+	
+func update_health():
+	var healthbar = $Healthbar
+	healthbar.value = health
+	if health >= 80:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true

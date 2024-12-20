@@ -33,6 +33,7 @@ func _process(delta: float) -> void:
 	move(delta)
 	handle_animation()
 	move_and_slide()
+	#update_health()
 
 func move(delta):
 	if !dead:
@@ -89,3 +90,13 @@ func take_damage(damage):
 		health = health_min
 		dead = true
 	print(str(self), "current health is ", health)
+	
+	
+	
+func update_health():
+	var healthbar = $Healthbar
+	healthbar.value = health
+	if health >= 80:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true

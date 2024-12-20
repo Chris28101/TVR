@@ -58,6 +58,7 @@ func _physics_process(delta: float) -> void:
 		handle_movement_animation(direction)
 		check_hitbox()
 	move_and_slide()
+	update_health()
 
 func check_hitbox():
 	var hitbox_areas = $PlayerHitbox.get_overlapping_areas()
@@ -157,3 +158,12 @@ func set_damage(attack_type):
 	elif attack_type == "air":
 		current_damage_to_deal = 20
 	Global.playerDamageAmount = current_damage_to_deal
+
+
+func update_health():
+	var healthbar = $Healthbar
+	healthbar.value = health
+	if health >= 100:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true
